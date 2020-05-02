@@ -3,7 +3,6 @@ import './App.css';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Container from 'react-bootstrap/Container';
-import LinkArea from '../src/LinkArea';
 
 class App extends Component{
 
@@ -24,14 +23,13 @@ class App extends Component{
   }
 
 
-
   handleSubmit(event){
     event.preventDefault();
     // const data = new FormData(event.target.value);
     const data = { longUrl: event.target.longUrl.value };
     console.log(event.target.longUrl.value);
     console.log(JSON.stringify(data));
-    fetch('http://localhost:5000/api/url/shorten', {
+    fetch('https://url-shortener-api1.herokuapp.com/api/url/shorten', {
       method: 'POST',
       headers:{
         'Content-Type': 'application/json'
