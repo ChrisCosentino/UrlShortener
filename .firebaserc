@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "urlshortener-629b1"
+    "default": "urlshortener-629b1",
+    "firebase-react-deploy": "urlshortener-629b1"
   }
 }
