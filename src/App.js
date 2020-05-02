@@ -30,6 +30,7 @@ class App extends Component{
     console.log(event.target.longUrl.value);
     console.log(JSON.stringify(data));
     fetch('https://url-shortener-api1.herokuapp.com/api/url/shorten', {
+      mode: 'no-cors',
       method: 'POST',
       headers:{
         'Content-Type': 'application/json'
